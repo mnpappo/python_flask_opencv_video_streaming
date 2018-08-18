@@ -1,3 +1,8 @@
+#python_flask_opencv_video_streaming
+#Author: Md. Nadimozzaman Pappo
+#Company: GoonFol
+#Inspired By: https://blog.miguelgrinberg.com/post/video-streaming-with-flask
+
 import cv2
 
 class VideoCamera(object):
