@@ -1,3 +1,9 @@
+#python_flask_opencv_video_streaming
+#Author: Md. Nadimozzaman Pappo
+#Company: GoonFol
+#Inspired By: https://blog.miguelgrinberg.com/post/video-streaming-with-flask
+#Source: https://github.com/goonfol/python_flask_opencv_video_streaming
+
 from flask import Flask, render_template, Response
 from camera import VideoCamera
 
@@ -21,4 +27,4 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True, debug=True)
+    app.run(host='0.0.0.0', threaded=False, debug=True)
