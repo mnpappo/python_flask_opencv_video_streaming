@@ -8,7 +8,7 @@ import cv2
 
 class VideoCamera(object):
     def __init__(self):
-        video_source = 'http://admin:Apekkhik@007@192.168.1.108/cgi-bin/realmonitor.cgi?action=getStream&channel=1&subtype=1'
+        video_source = 'http://admin:Apekkhik@007@192.168.1.108/cgi-bin/realmonitor.cgi?action=getStream&channel=1&subtype=0'
         # Video Source can be any video file(.mp4,...) supported by opencv, 
         # # raspberry pi camera or any com port like webcam, even a ipcamera stream output
         # Here I have tested it with IP Camera (DAHUA DH-IPC-HFW1120SP)
