@@ -12,37 +12,35 @@
 
   </head>
   <body>
-    <h1 class="text-center head_title">Hello, world!</h1>
+    <h1 class="text-center head_title">Secuvallence - IPC Live</h1>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-sm-8 text-center">
+                
+                <div class="video_control">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-warning btn-block play_video">Record</button>
+                        <button type="button" class="btn btn-outline-success btn-block play_video">Play</button>
+                        <button type="button" class="btn btn-outline-danger btn-block play_video">Pause</button>
+                        <button type="button" class="btn btn-outline-info btn-block play_video">Fullscrean</button>
+                        <button type="button" id="video_info" class="btn btn-outline-primary btn-block" data-toggle="collapse" href="#infoCollapse" aria-expanded="false" aria-controls="thisVideoInfo">Video Info</button>
+                    </div>
+                </div>
                 <div class="video_viewport">
                     <img id="bg" src="{{ url_for('video_feed') }}">
                 </div>
             </div>
             
-            <div class="col-sm-3">
-                <div class="video_control">
-                    <button type="button" class="btn btn-outline-warning btn-block play_video">Record</button>
-                    <button type="button" class="btn btn-outline-success btn-block play_video">Play</button>
-                    <button type="button" class="btn btn-outline-danger btn-block play_video">Pause</button>
-                    <button type="button" class="btn btn-outline-info btn-block play_video">Fullscrean</button>
-                    <button type="button" id="video_info" class="btn btn-outline-primary btn-block" data-toggle="collapse" href="#infoCollapse" aria-expanded="false" aria-controls="thisVideoInfo">Video Info</button>
+            <div class="col-sm-4 h-100">
+                <div class="card card-body info_body">
+                    {% if config %}
+                    <p> {{ config }}!</p>
+                    {% else %}
+                    <h1>Error loading config. Check IPC Connection!</h1>
+                    {% endif %}
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="video_control">
-                    <div class="collapse thisVideoInfo" id="infoCollapse">
-                        <div class="card card-body info_body">
-                            {% if config %}
-                            <p> {{ config }}!</p>
-                            {% else %}
-                            <h1>Error loading config. Check IPC Connection!</h1>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
         </div>

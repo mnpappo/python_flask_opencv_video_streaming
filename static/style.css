@@ -4,7 +4,14 @@
     color: white;
     margin-bottom: 15px;
 }
-
+.video_control {
+    margin-bottom: 10px;
+}
+.info_body {
+    max-height: 800px;
+    overflow-y: scroll;
+}
+    
 .video_viewport {
     border: 1px solid red;
 }
